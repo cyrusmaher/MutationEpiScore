@@ -11,7 +11,7 @@ You can build the docker environment with
 `docker build .`
 
 An example for running from docker can be found in `run_docker.sh`
-You will have to update `CONTAINER_ID` on the first line of the script to match the ID of the container you built.
+You will have to update `CONTAINER_ID` on the first line of the script to match the ID of the container you built. The comments within the script will make it clear where to update the input file, output directory, etc.
 
 # Usage
 `python forecasting.py [GISAID metadata file] [Output folder]`

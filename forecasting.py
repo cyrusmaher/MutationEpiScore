@@ -15,6 +15,7 @@ import var_classification_helper as varclass
 import var_ranking_helper as helper
 import utils
 import parse_gisaid as gisaid
+import os
 
 today = utils.today
 
@@ -166,7 +167,10 @@ if __name__ == "__main__":
 
     print("Arguments are:")
     print(arguments)
-
+    
+    if not os.path.exists(arguments["<outfolder>"]):
+        os.mkdir(arguments["<outfolder>"])
+    
     write_summaries(
         arguments["<infile>"],
         arguments["<outfolder>"],
