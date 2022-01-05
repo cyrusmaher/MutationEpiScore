@@ -166,7 +166,8 @@ def filter_by_date(raw_table, filter_last_n_days):
         return raw_table[((date.max() - date).dt.days <= filter_last_n_days)]
 
 def read_gisaid_assummary(
-    fname=athome("Data/SARS2/metadata_nov2021.tsv"), states=False,
+    fname=athome("Data/SARS2/metadata_oct2021.tsv"), 
+    states=False,
     filter_last_n_days=None
 ):
     df = filter_by_date(

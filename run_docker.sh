@@ -8,5 +8,5 @@ docker run -it -v ${CODE}:/root/Code \
 -v ${DATA}:/root/Data \
 ${CONTAINER_ID} \
 bash -c "conda run -n sars2-forecasting python ~/Code/forecasting.py  \
-~/Data/SARS2/${METADATA_FNAME}  \
-~/Data/SARS2/forecast"
+${DATA}/${METADATA_FNAME}  \
+${DATA}/forecast"

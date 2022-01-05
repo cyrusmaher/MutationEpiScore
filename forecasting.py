@@ -20,11 +20,12 @@ today = utils.today
 
 def read_input(in_file, from_meta, from_lineage, filter_last_n_days):
     if from_lineage:
+        print(f"Reading gisaid lineage summary: {in_file}")
         df = read_lineage_table(in_file, filter_last_n_days=filter_last_n_days)
         print(f"Reading {len(df)} rows from lineage file")
         return df
     elif from_meta:
-        print("Reading gisaid summary")
+        print(f"Reading gisaid metadata summary: {in_file}")
         return gisaid.read_gisaid_assummary(fname=in_file, filter_last_n_days=filter_last_n_days)
     else:
         if filter_last_n_days is not None:
