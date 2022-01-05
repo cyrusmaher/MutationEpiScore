@@ -11,10 +11,10 @@ Options:
 import pandas as pd
 import numpy as np
 from docopt import docopt
-from . import var_classification_helper as varclass
-from . import var_ranking_helper as helper
-from . import utils
-from . import parse_gisaid as gisaid
+import var_classification_helper as varclass
+import var_ranking_helper as helper
+import utils
+import parse_gisaid as gisaid
 
 today = utils.today
 
