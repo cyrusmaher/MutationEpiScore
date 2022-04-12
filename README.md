@@ -17,6 +17,10 @@ You will have to update `CONTAINER_ID` on the first line of the script to match 
 The input to this method is GISAID metadata. You can apply for access to GISAID here:
 https://www.gisaid.org/registration/register/
 
+Once you have the data dump from GISAID, look for a file like `metadata_tsv_{date}.tar.xz`
+
+Untar this file. Inside you'll find `metadata.tsv`. This file is the input to the command below.
+
 # Usage
 `python forecasting.py [GISAID metadata file] [Output folder]`
 
